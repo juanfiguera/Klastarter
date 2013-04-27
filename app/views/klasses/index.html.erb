@@ -1,0 +1,35 @@
+<h1>Listing klasses</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Tags</th>
+    <th>Price</th>
+    <th>Duration</th>
+    <th>Media</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @klasses.each do |klass| %>
+  <tr>
+    <td><%= klass.title %></td>
+    <td><%= klass.description %></td>
+    <td><%= klass.category %></td>
+    <td><%= klass.tags %></td>
+    <td><%= klass.price %></td>
+    <td><%= klass.duration %></td>
+    <td><%= klass.media %></td>
+    <td><%= link_to 'Show', klass %></td>
+    <td><%= link_to 'Edit', edit_klass_path(klass) %></td>
+    <td><%= link_to 'Destroy', klass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Klass', new_klass_path %>

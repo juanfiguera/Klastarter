@@ -1,4 +1,7 @@
 Klastarter::Application.routes.draw do
+  resources :klasses
+
+
   authenticated :user do
     root :to => 'home#index'
   end

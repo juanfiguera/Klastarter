@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427234530) do
+ActiveRecord::Schema.define(:version => 20130427235445) do
+
+  create_table "klasses", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "category"
+    t.string   "tags"
+    t.string   "price"
+    t.datetime "duration"
+    t.string   "media"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
